@@ -19,5 +19,31 @@ With MCP, you can define **tools** that your LLM can call dynamically — LangCh
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/<your-username>/<your-repo>.git](https://github.com/AnkurSingh-ML/MCP-Tutorial.git)
+cd MCP-Tutorial
+```
+## 2. Create Virtual Environment
+Install UV Package Manager. <br>
+Create a Virtual Environment.<br>
+Activate the Virtual Environment.<br>
+Install the dependencies.<br>
+```bash
+pip install uv
+uv venv
+.venv\Scripts\activate  # On Windows
+source .venv/bin/activate  # On Mac/Linux
+uv pip -r requirements.txt
+```
+### 3. Create .env file with Groq API Key
+```bash
+GROQ_API_KEY="your_groq_api_key_here"
+```
+### 4. Start the MCP Servers in different Terminals
+```bash
+python mathserver.py
+python weatherapi.py
+```
+### 5. Start the MCP Client
+```bash
+python client.py
+```
